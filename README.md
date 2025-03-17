@@ -18,7 +18,7 @@
 - `ShiftDownItemsCoroutine()`
 
 ### **Level Moves**
-- Previously, the condition for `eGameState::GameOver` was all **16 moves had to be made**. Now, this condition is **removed**.
+- Previously, the condition for `eGameState::GameOver` was all **16 moves** had to be made. Now, this condition is **removed**.
 - The **new condition** for **Game Over** is when the **Backpack is full**.
 
 ---
@@ -41,16 +41,16 @@
 
 ### **Backpack** *(MonoBehaviour)*
 - **`Start()`**: Constructs **5 empty Cells** horizontally.
-- **`AddToBackpack(Cell c)`**: Moves the item from a `Cell` into an **available Cell** in `List<Item>`, using **DOTween**.
-- **`FindMatchesAndCollapse()`**: If there are **3 identical Items** in the **Backpack**, then **delete those 3 Items**, using **DOTween** to **shorten `List<Item>`**.
+- **`AddToBackpack(Cell c)`**: Moves the item from a `Cell` into an **available Cell** in `List<Item>`, using **DOTween** for smooth movement.
+- **`FindMatchesAndCollapse()`**: If there are **3 identical Items** in the **Backpack**, then **delete those 3 Items**, using **DOTween** to shorten `List<Item>`.
 
 ### **Board**
 - **Refactored `Fill()`** into `FillWithRandomItem()`.
-- **Modified `FillWithRandomItem()`** so that the **total of each Item is divisible by 3**.
+- **Modified `FillWithRandomItem()`** so that the total of each Item is **divisible by 3**.
 
 ### **Board Controller**
 - `m_board` now becomes **upperBoard** and **lowerBoard**.
-- Became a **partial class**: split into **two scripts** (main logic and AutoPlay mode).
+- Became a **partial class**: split into two scripts(main logic and AutoPlay mode).
 - **New Functions:**
   - `ProcessClick()`: When the player clicks on a **Cell** containing an **Item (`Item != null`)**, execute `AddToBackpack(Cell)` from **Backpack** (disabled in **AutoPlayMode**).
   - `IEnumerator AutoPlayRoutine()`: Activated in **AutoPlayMode**.
@@ -58,10 +58,10 @@
   - `Update()`: Now receives **signals from `Input.MouseButtonDown(0)`**.
 
 ### **GameManager**
-- **New `eLevelMode` Value:** `NormalMode`.
-- **New `eStateGame` Value:** `Win`.
+- New `eLevelMode` Value: `NormalMode`.
+- New `eStateGame` Value: `Win`.
 - **New Function:**
-  - `Win()`: Happens when **both `bottom_board` and `upper_board` are cleared**.
+  - `Win()`: Happens when both `bottom_board` and `upper_board` are cleared.
 
 ### **UPanelWin**
 - Deployed from **`IMenu`**.
