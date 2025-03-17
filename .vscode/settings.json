@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CandyCrush-Project.sln",
+    "dotnet.defaultSolution": "Candy-Crush-Interview-test.sln",
     "dotnet.preferCSharpExtension": true
 }

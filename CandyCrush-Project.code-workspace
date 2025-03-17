@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"dotnet.defaultSolution": "CandyCrush-Project.sln"
+		"dotnet.defaultSolution": "CandyCrush-Project.sln",
+		"dotnet.preferCSharpExtension": true
 	}
 }

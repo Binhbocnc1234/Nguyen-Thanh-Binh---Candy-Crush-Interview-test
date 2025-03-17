@@ -13,7 +13,7 @@ public class Cell : MonoBehaviour
     public int BoardX { get; private set; }
 
     public int BoardY { get; private set; }
-    [HideInInspector] public int countOverlapped;
+    [HideInInspector] public int countOverlapped{ get; private set; }
     public Item Item { get; private set; }
 
     public Cell NeighbourUp { get; set; }
@@ -23,7 +23,7 @@ public class Cell : MonoBehaviour
     public Cell NeighbourBottom { get; set; }
 
     public Cell NeighbourLeft { get; set; }
-    [HideInInspector] public List<Cell> belowCell;
+    // [HideInInspector] public List<Cell> belowCell;
     public bool isInteractable = true;
     public bool IsEmpty => Item == null;
     public SpriteRenderer spriteRen;

@@ -111,13 +111,6 @@ public partial class BoardController : Singleton<BoardController>
         }
         
     }
-
-    private void ResetRayCast()
-    {
-        m_isDragging = false;
-        m_hitCollider = null;
-    }
-
     private List<Cell> GetMatches(Cell cell)
     {
         return new List<Cell>();
